@@ -1,0 +1,33 @@
+#Serve port
+server:
+  port: 8085
+  
+#application Name
+spring:
+  application:
+    name: Springboot1
+    
+#Datasource 
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: test
+    password: test
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+      
+#H2 Database Configuration
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  
+ 
+# Eureka Client Configuration
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8081/eureka/
+      
